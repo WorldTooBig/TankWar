@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<script src="js/jquery-3.3.1.min.js"></script>
+<link rel="stylesheet" type="text/css" href="css/player.css">
+
+
+</head>
+
+<body>
+	<div id="backgroundDiv">
+		<table style="border-spacing:0" border=0 id="tab"></table>
+	<div>
+	<div id="nav">
+		<ul>
+			<li>砖块<div></div></li>
+		</ul>
+	</div>
+</body>
+<script src="js/init.js"></script>
+<script>
+//加载地图
+window.onload = loading();
+
+function loading() {
+	var str = "";
+	var i, j;
+	for(var i = 0; i < backHeight/50; i++) {
+		str += "<tr>";
+		for(var j = 0; j < backWidth/50; j++) {
+			str += "<td></td>";
+		}
+		str += "</tr>";
+	}
+	$("#tab").append(str);
+}//i = 18, j = 32
+</script>
+</html>
